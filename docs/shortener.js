@@ -36,10 +36,10 @@ themeToggle.addEventListener("click", () => {
   darkTheme.style.display = defaultTheme ? "flex" : "none";
   lightTheme.style.display = defaultTheme ? "none" : "flex";
   body.className = defaultTheme ? "light-mode" : "dark-mode";
-  mainLogo.src = defaultTheme ? "./images/logo.svg" : "./images/vector.svg";
+  mainLogo.src = defaultTheme ? "../images/logo.svg" : "../images/vector.svg";
   mobileNavOpener.src = defaultTheme
-    ? "./images/icon-menu.svg"
-    : "./Icons/icon-menu 1 white og.svg";
+    ? "../images/icon-menu.svg"
+    : "../Icons/icon-menu 1 white og.svg";
 });
 
 let copyButton;
@@ -53,14 +53,14 @@ const divCreate = (inputs, fetchedLink) => {
 };
 
 async function fetchedLink(inputs) {
-  const fetchUrl = `http://localhost:7000/api/shorten`; 
+  const fetchUrl = `http://localhost:7000/api/shorten`;
   try {
     const fetching = await fetch(fetchUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json", 
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ url: inputs }), 
+      body: JSON.stringify({ url: inputs }),
     });
 
     if (!fetching.ok) {
