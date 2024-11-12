@@ -1,14 +1,8 @@
 {
   "builds": [
-    { "src": "api/server.js", "use": "@vercel/node" },
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "styles.css", "use": "@vercel/static" },
-    { "src": "shortener.js", "use": "@vercel/static" },
-    { "src": "images/*", "use": "@vercel/static" },
-    { "src": "Icons/*", "use": "@vercel/static" }
+    { "src": "api/Server.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/server.js" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/api/(.*)", "dest": "/api/Server.js" }
   ]
 }
