@@ -53,14 +53,14 @@ const divCreate = (inputs, fetchedLink) => {
 };
 
 async function fetchedLink(inputs) {
-  const fetchUrl = `http://localhost:7000/shorten`; // Local server URL
+  const fetchUrl = `http://localhost:7000/api/shorten`; 
   try {
     const fetching = await fetch(fetchUrl, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json", // Ensure it's JSON
+        "Content-Type": "application/json", 
       },
-      body: JSON.stringify({ url: inputs }), // Send the URL as JSON
+      body: JSON.stringify({ url: inputs }), 
     });
 
     if (!fetching.ok) {
