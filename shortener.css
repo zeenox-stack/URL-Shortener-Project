@@ -1,0 +1,653 @@
+.light-mode {
+  --body-color: hsl(0, 0%, 83%);
+  --main-color: white;
+  --text-color: black;
+  --white-border: none;
+  --anchor-color: rgb(70, 70, 70);
+  --s-color: hsl(0%, 0%, 92%);
+}
+
+.dark-mode {
+  --body-color: hsl(0, 0%, 17%);
+  --main-color: rgb(26, 26, 26);
+  --white-border: 0.1px solid white;
+  --text-color: white;
+  --anchor-color: rgb(224, 224, 224);
+  --s-color: hsl(0%, 0%, 8%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-color);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7.6rem 0 7.6rem;
+  background-color: var(--main-color);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.navs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navs > img {
+  height: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-blend-mode: lighten;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 15px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: var(--anchor-color);
+  opacity: 0.5;
+  font-family: inherit;
+  font-weight: bold;
+  position: relative;
+}
+
+.signing-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.themes {
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themes > div > img {
+  height: 1rem;
+  width: 1rem;
+}
+
+.login {
+  border: none;
+  font-size: 14px;
+  padding: 0.5rem;
+  border-radius: 1.4rem;
+  color: var(--anchor-color);
+  font-weight: bold;
+  background: transparent;
+}
+
+.signup {
+  padding: 0.5rem 0.9rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 13px;
+  background-color: hsl(180, 66%, 49%);
+  color: var(--main-color);
+}
+
+.contents {
+  display: flex;
+  padding: 0 8rem 8rem 8rem;
+  background-color: var(--main-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.illustration > img {
+  width: 100%;
+}
+
+.description > h1 {
+  font-size: 2.6rem;
+  font-weight: bolder;
+  margin-bottom: 0;
+  color: var(--text-color);
+}
+
+.description > p {
+  margin-top: 0;
+  padding-top: 0;
+  color: var(--text-color);
+  font-size: 13px;
+  opacity: 0.5;
+  font-weight: 450;
+}
+
+.description > button {
+  padding: 0.5rem 1.35rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 13px;
+  background-color: hsl(180, 66%, 49%);
+  color: var(--main-color);
+}
+
+.shortening-area {
+  transform: translateX(8rem);
+  background: url(./images/bg-shorten-desktop.svg);
+  width: 70%;
+  background-color: hsl(257, 27%, 26%);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-size: cover;
+}
+
+#shortener {
+  width: 95%;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--body-color);
+}
+
+.shortening-area > button {
+  padding: 0.8rem 0.7rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 13px;
+  background-color: hsl(180, 66%, 49%);
+  color: var(--main-color);
+  width: 6.5rem;
+}
+
+.stats {
+  padding-top: 7rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.desc > h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.desc > p {
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.ruler {
+  height: 3px;
+  background-color: hsl(180, 66%, 49%);
+  border: none;
+  margin: 12rem 7.5rem 15rem 7.5rem;
+}
+
+.statistics {
+  position: relative;
+}
+
+.brand-recognition,
+.detailed-records,
+.fully-customizable {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  width: 17rem;
+  border-radius: 5px;
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem;
+  position: absolute;
+}
+
+.brand-recognition > div,
+.detailed-records > div,
+.fully-customizable > div {
+  position: absolute;
+  top: -2.5rem;
+  background-color: hsl(257, 27%, 26%);
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+.brand-recognition {
+  top: -27rem;
+  left: 6.5rem;
+}
+
+.detailed-records {
+  left: 30rem;
+  top: -23rem;
+}
+
+.fully-customizable {
+  left: 54rem;
+  top: -19rem;
+}
+
+.boosts {
+  padding: 3rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/bg-boost-desktop.svg);
+  background-color: hsl(257, 27%, 26%);
+  background-size: cover;
+}
+
+.boosts > h2 {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.boosts > button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 13px;
+  background-color: hsl(180, 66%, 49%);
+  color: var(--main-color);
+  width: 7rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(260, 8%, 14%);
+}
+
+footer > h2 {
+  font-size: 1.6rem;
+  color: white;
+  padding-left: 4rem;
+}
+
+.more-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.more-links > div {
+  color: white;
+  padding: 0 3rem 0 3rem;
+}
+
+.more-links > div > h4 {
+  font-size: 1rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0;
+  padding-left: 0.4rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.farmore-links-one,
+.farmore-links-two {
+  margin-bottom: 1.5rem;
+}
+
+.socials {
+  padding-top: 3rem;
+  padding-right: 5rem;
+}
+
+.socials > a {
+  padding: 0.45rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0.4rem;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+.nav-open,
+.nav-menu {
+  display: none;
+}
+
+.themes,
+.login,
+.signup {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 1.4rem;
+}
+
+.dark-theme {
+  display: flex;
+}
+
+.light-theme {
+  display: none;
+}
+
+nav > a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+  border-radius: 0.5rem;
+  transition: height 0.3s ease, width 0.3s ease;
+  background-color: hsl(180, 66%, 49%);
+  z-index: -1;
+}
+
+.shortening-area > div > p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.shortening-area > div {
+  width: 80%;
+}
+
+.results {
+  padding: 1rem;
+  width: 80%;
+  height: 50%;
+  margin: 1rem auto;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.results > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.given-link,
+.shortened-link {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 1rem;
+}
+
+.shortened-link {
+  padding-left: 8rem;
+}
+
+.copy-button {
+  padding: 0.5rem 1rem;
+  background-color: hsl(180, 66%, 49%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*hover states*/
+
+nav > a:hover::before {
+  height: 0.25rem;
+  width: 4rem;
+}
+
+nav > a:active {
+  opacity: 1;
+  color: black;
+}
+
+button:active {
+  background-color: hsl(180, 45%, 67%);
+}
+
+.login:hover,
+.themes:hover {
+  background-color: hsl(0, 0%, 84%);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .results > div > p,
+  .results > div > button {
+    font-size: 11px;
+  }
+
+  .shortened-link {
+    padding-left: 5px;
+  }
+
+  .nav-open {
+    display: flex;
+  }
+
+  .statistics {
+    position: relative;
+    width: 100%;
+  }
+
+  .shortening-area {
+    position: absolute;
+    top: calc(20vh + 31rem);
+    transform: translateX(50%);
+    width: 40%;
+    flex-direction: column;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  #shortener {
+    width: 95%;
+    margin-right: 0;
+  }
+
+  .stats {
+    padding-top: 7rem;
+    padding-bottom: 15rem;
+    font-size: 15px;
+  }
+
+  .ruler {
+    margin: 35rem 0 18rem 0;
+    transform: rotate(90deg);
+    position: relative;
+    left: 1vw;
+  }
+
+  .brand-recognition > div,
+  .detailed-records > div,
+  .fully-customizable > div {
+    right: 37%;
+  }
+
+  .brand-recognition > h4,
+  .detailed-records > h4,
+  .fully-customizable > h4 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .brand-recognition {
+    top: -40rem;
+    left: 2rem;
+    text-align: center;
+  }
+
+  .detailed-records {
+    top: -23rem;
+    left: 2rem;
+    text-align: center;
+  }
+
+  .fully-customizable {
+    top: -5rem;
+    left: 2rem;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer > h2 {
+    padding-left: 0;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .more-links {
+    flex-direction: column;
+  }
+
+  .more-links > div {
+    padding: 0;
+    margin: 0;
+  }
+
+  .boosts {
+    padding: 1rem;
+  }
+
+  .shortening-area > button {
+    width: 100%;
+  }
+
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contents {
+    padding: 0 1rem 8rem 1rem;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .socials {
+    padding-left: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 5rem;
+    left: 10rem;
+    background-color: hsl(257, 27%, 26%);
+    text-align: center;
+    width: 18rem;
+    border-radius: 1rem;
+    animation: slideIn 1s 1 ease;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons > button {
+    margin: 1rem;
+    text-align: center;
+    width: 80%;
+    margin: 0;
+  }
+
+  .buttons > .login {
+    margin: 0.5rem;
+    color: white;
+  }
+
+  .buttons > .signup {
+    margin: 0.5rem 0 2.5rem 0;
+    color: white;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 17px;
+  }
+
+  .mob-nav {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  hr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: hsl(0, 0%, 83%);
+  }
+
+  .mob-nav > a {
+    display: block;
+    color: white;
+    margin: 1rem;
+    opacity: 1;
+  }
+
+  nav,
+  .signing-area {
+    display: none;
+  }
+}
