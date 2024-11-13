@@ -53,7 +53,7 @@ const divCreate = (inputs, fetchedLink) => {
 };
 
 async function fetchedLink(inputs) {
-  const fetchUrl = `http://localhost:7000/api/shorten`;
+  const fetchUrl = `https://urlshorteningproject.vercel.app/api/shorten`;
   try {
     const fetching = await fetch(fetchUrl, {
       method: "POST",
