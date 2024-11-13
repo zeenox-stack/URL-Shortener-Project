@@ -50,6 +50,14 @@ const divCreate = (inputs, fetchedLink) => {
                         <p class="shortened-link">${fetchedLink}</p>
                         <button class="copy-button">copy</button>`;
   results.appendChild(div);
+
+  div.querySelector(".copy-button").addEventListener('click', button => { 
+    const clickedbutton = button.target;
+
+    clickedbutton.style.backgroundColor = "hsl(257, 27%, 26%)"; 
+    clickedbutton.textContent = "copied!";
+    navigator.clipboard.writeText(fetchedLink); 
+  })
 };
 
 async function fetchLink(inputs) {
@@ -71,7 +79,7 @@ async function fetchLink(inputs) {
         p.textContent = "Invlid URL";
       } else {
         p.textContent = "";
-        divCreate(inputs, JSON.stringify(data.result_url));
+        divCreate(inputs, data.result_url);
       }
     }
   } catch (error) {

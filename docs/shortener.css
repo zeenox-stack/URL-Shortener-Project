@@ -406,6 +406,7 @@ nav > a::before {
 
 .shortened-link {
   padding-left: 8rem;
+  color: hsl(180, 66%, 49%);
 }
 
 .copy-button {
