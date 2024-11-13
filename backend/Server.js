@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post("/shorten", async (req, res) => {
+app.post("/api/shorten", async (req, res) => {
   try {
     const response = await fetch("https://cleanuri.com/api/v1/shorten", {
       method: "POST",
