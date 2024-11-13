@@ -52,7 +52,7 @@ const divCreate = (inputs, fetchedLink) => {
   results.appendChild(div);
 };
 
-async function fetchedLink(inputs) {
+async function fetchLink(inputs) {
   const fetchUrl = `https://urlshorteningproject.vercel.app/api/shorten`;
   try {
     const fetching = await fetch(fetchUrl, {
@@ -66,7 +66,7 @@ async function fetchedLink(inputs) {
     if (!fetching.ok) {
       console.error("Couldn't shorten the link");
     } else {
-      const data = await fetching.json();
+      const data = await fetching.json(); 
       if (data.error) {
         p.textContent = "Invlid URL";
       } else {
@@ -84,6 +84,6 @@ linkShort.addEventListener("click", () => {
     p.textContent = "Field Cannot be empty!";
   } else {
     p.textContent = "";
-    fetchedLink(input.value);
+    fetchLink(input.value);
   }
 });
