@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live](https://zeenox-stack.github.io/URL-Shortening-Project/)
+- Solution URL: [Repository Url](https://github.com/zeenox-stack/URL-Shortener-Project.git)
+- Live Site URL: [Live](https://zeenox-stack.github.io/URL-Shortener-Project/)
 
 ### Built with
 
