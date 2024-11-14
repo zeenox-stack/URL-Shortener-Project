@@ -51,13 +51,13 @@ const divCreate = (inputs, fetchedLink) => {
                         <button class="copy-button">copy</button>`;
   results.appendChild(div);
 
-  div.querySelector(".copy-button").addEventListener('click', button => { 
+  div.querySelector(".copy-button").addEventListener("click", (button) => {
     const clickedbutton = button.target;
 
-    clickedbutton.style.backgroundColor = "hsl(257, 27%, 26%)"; 
+    clickedbutton.style.backgroundColor = "hsl(257, 27%, 26%)";
     clickedbutton.textContent = "copied!";
-    navigator.clipboard.writeText(fetchedLink); 
-  })
+    navigator.clipboard.writeText(fetchedLink);
+  });
 };
 
 async function fetchLink(inputs) {
@@ -74,7 +74,7 @@ async function fetchLink(inputs) {
     if (!fetching.ok) {
       console.error("Couldn't shorten the link");
     } else {
-      const data = await fetching.json(); 
+      const data = await fetching.json();
       if (data.error) {
         p.textContent = "Invlid URL";
       } else {
