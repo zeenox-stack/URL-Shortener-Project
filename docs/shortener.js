@@ -36,7 +36,7 @@ themeToggle.addEventListener("click", () => {
   darkTheme.style.display = defaultTheme ? "flex" : "none";
   lightTheme.style.display = defaultTheme ? "none" : "flex";
   body.className = defaultTheme ? "light-mode" : "dark-mode";
-  mainLogo.src = defaultTheme ? "./images/logo.svg" : "./images/vector.svg";
+  mainLogo.src = defaultTheme ? "./images/logo.svg" : "./images/Vector.svg";
   mobileNavOpener.src = defaultTheme
     ? "./images/icon-menu.svg"
     : "./Icons/icon-menu 1 white og.svg";
