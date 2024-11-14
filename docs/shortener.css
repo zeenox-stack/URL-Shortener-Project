@@ -145,7 +145,7 @@ nav > a {
 
 .shortening-area {
   transform: translateX(8rem);
-  background: url(../images/bg-shorten-desktop.svg);
+  background: url(./images/bg-shorten-desktop.svg);
   width: 70%;
   background-color: hsl(257, 27%, 26%);
   padding: 2rem;
@@ -250,7 +250,7 @@ nav > a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(../images/bg-boost-desktop.svg);
+  background: url(./images/bg-boost-desktop.svg);
   background-color: hsl(257, 27%, 26%);
   background-size: cover;
 }
